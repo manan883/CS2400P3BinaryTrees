@@ -107,36 +107,7 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
 		   postorderTraverse(node.getRightChild());
 		   System.out.println(node.getData());
 	   }
-//	  ArrayList<T> arrR = new ArrayList<T>();
-//	  ArrayList<T> arrL = new ArrayList<T>();
-//	   if(node.isLeaf() == true) {
-//		   System.out.println("Node given is a leaf");
-//		   System.out.println(node.getData());
-//	   }
-////	   BinaryNode<T> right = node.getRightChild();
-////	   arrR.add(right.getData());
-////	   BinaryNode<T> left = node.getLeftChild();
-////	   arrL.add(left.getData());
-//	   //this splits it into 3 ifs, this handles errors 
-//		   if(node.hasRightChild() == true) {
-//			   BinaryNode<T> right = node.getRightChild();
-//			   BinaryNode<T> tempR = right.getRightChild();
-//			   right = tempR.getRightChild();
-//
-//		   }
-//		   else if(node.hasLeftChild() == true) {
-//			   BinaryNode<T> left = node.getLeftChild();
-//			   BinaryNode<T> tempL = left.getRightChild();
-//		   }
-//		   if((node.hasRightChild() == true)&&(node.hasLeftChild() == true)){
-//			   BinaryNode<T> right = node.getRightChild();
-//			   BinaryNode<T> left = node.getLeftChild();
-//			   while(true) {
-//				   BinaryNode<T> tempR = right.getRightChild();
-//				   BinaryNode<T> tempL = left.getRightChild();
-//				   right = tempR.getRightChild();
-//			   }
-//		   }
+
 
    }
  
