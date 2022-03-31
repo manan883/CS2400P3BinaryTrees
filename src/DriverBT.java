@@ -33,7 +33,7 @@ public class DriverBT
 		//aTree2.postorderTraverse();
 		
 		System.out.println("(binaryNode) post-order: ");
-		aTree2.postorderTraverse_callBinaryNodeMethod();
+//		aTree2.postorderTraverse_callBinaryNodeMethod();
 		
 		System.out.println();
 		
