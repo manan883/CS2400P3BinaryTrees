@@ -90,7 +90,7 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
    
    /** calls postorderTraverse(BinaryNode<T> node)
     * prints (using post-order traversal) all nodes in the "whole" tree */
-   public void postorderTraverse()
+   protected void postorderTraverse()
    {
 	   postorderTraverse(root);
    }
@@ -163,13 +163,14 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
    /** A Recursive Method in the BinaryTree Class   
     * Counts the nodes in the subtree rooted at this node.
    @return  The number of nodes in the subtree rooted at this node. */
-   int numberOfNodes;
    private int getNumberOfNodes(BinaryNode<T> node)
    {
+	   int numberOfNodes = 0;
 	   if (node != null) {
-		   getNumberOfNodes(node.getLeftChild());
-		   getNumberOfNodes(node.getRightChild());
-		   numberOfNodes++;
+		   numberOfNodes = 1 + getNumberOfNodes(node.getLeftChild()) + getNumberOfNodes(node.getRightChild());
+	   }
+	   else {
+		   return 0;
 	   }
 	return numberOfNodes;
    } // end getNumberOfNodes

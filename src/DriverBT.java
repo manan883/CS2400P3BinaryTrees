@@ -103,7 +103,6 @@ public class DriverBT {
 		System.out.println("  /          ");
 		System.out.println(" J           ");
 
-
 	} // end createTree2
 
 } // end DriverBT

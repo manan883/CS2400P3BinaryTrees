@@ -125,7 +125,7 @@ class BinaryNode<T>
    int height;
    public int getHeight_binaryNodeMethod()
    {  
-	   
+	  
 	   if (leftChild != null) {
 		   heightLeft = 1 + leftChild.getHeight_binaryNodeMethod();
 	   }
