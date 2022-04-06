@@ -118,6 +118,9 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
    {
 	   // The same method as postorderTraverse() but it returns a string instead of being void
 	   result = "";
+	   if (root == null) {
+		   return "";
+	   }
 	   return postOrderTraverseProtected(root);
    } // end postorderTraverseProtected()
    
@@ -147,6 +150,10 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
     */
    protected String postorderTraverse_callBinaryNodeMethodProtected()
    {
+	   // If the tree is null, return an empty string
+	   if (root == null) {
+		   return "";
+	   }
 	   // The same method as postorderTraverse_callBinaryNodeMethod() but it returns a string instead of being void
 	   return root.postorderTraverse_binaryNodeMethodProtected();
    } // end postorderTraverse_callBinaryNodeMethodProtected()
@@ -182,6 +189,10 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
    @return  The height of the "whole" tree. */
    public int getHeight_callBinaryNodeMethod()
    {
+	   // If the tree is null, return 0
+	   if (root == null) {
+		   return 0;
+	   }
 	   // Calls getHeight_binaryNodeMethod() with root as the starting node
 	   return root.getHeight_binaryNodeMethod();
    } // end getHeight_callBinaryNodeMethod()

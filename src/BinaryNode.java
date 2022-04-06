@@ -145,7 +145,8 @@ class BinaryNode<T>
 	   // Initialize variables
 	   int heightLeft = 1;
 	   int heightRight = 1;
-	   int height;
+	   int height = 0;
+
 	   // If a left child exists, add one to heightLeft and call getHeight_binaryNodeMethod() again
 	   if (leftChild != null) {
 		   heightLeft = 1 + leftChild.getHeight_binaryNodeMethod();

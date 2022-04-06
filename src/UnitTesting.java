@@ -189,6 +189,16 @@ public class UnitTesting {
 		assertEquals(aTree6.postorderTraverseProtected(), "D E B H I G F C A ");
 		assertEquals(aTree6.postorderTraverse_callBinaryNodeMethodProtected(), "D E B H I G F C A ");
 		System.out.println("");	
+		
+		System.out.println("");
+		System.out.println("BinaryTree postorderTraverseProtectedTest #7: No tree");
+		BinaryTree<String> aTree7 = new BinaryTree<>();
+		System.out.println("TESTING:(BinaryTree) Postorder of tree is " + aTree7.postorderTraverseProtected());
+		System.out.println("TESTING:(BinaryNode) Postorder of tree is " + aTree7.postorderTraverse_callBinaryNodeMethodProtected());
+		System.out.println("GIVEN:                                    " + "");
+		assertEquals(aTree7.postorderTraverseProtected(), "");
+		assertEquals(aTree7.postorderTraverse_callBinaryNodeMethodProtected(), "");
+		System.out.println("");	
 	} // end postOrderTraverseProtectedTest
 	
 	@Test
@@ -247,6 +257,14 @@ public class UnitTesting {
 		System.out.println("TESTING:(BinaryNode) Height of tree is " + aTree6.getHeight_callBinaryNodeMethod());
 		assertEquals(aTree6.getHeight(), aTree6.getHeight_callBinaryNodeMethod());
 		System.out.println("");
+		
+		System.out.println("");
+		System.out.println("BinaryNode getHeight_callBinaryNodeMethodTest #7: No tree");
+		BinaryTree<String> aTree7 = new BinaryTree<>();
+		System.out.println("GIVEN:  (BinaryTree) Height of tree is " + aTree7.getHeight());
+		System.out.println("TESTING:(BinaryNode) Height of tree is " + aTree7.getHeight_callBinaryNodeMethod());
+		assertEquals(aTree7.getHeight(), aTree7.getHeight_callBinaryNodeMethod());
+		System.out.println("");
 	} // end getHeight_callBinaryNodeMethodTest
 	
 	@Test
@@ -304,6 +322,14 @@ public class UnitTesting {
 		System.out.println("TESTING: (BinaryTree) Number of nodes in the tree are " + aTree6.getNumberOfNodes());
 		System.out.println("GIVEN:   (BinaryNode) Number of nodes in the tree are " + aTree6.getNumberOfNodes_callBinaryNodeMethod());
 		assertEquals(aTree6.getHeight(), aTree6.getHeight_callBinaryNodeMethod());
+		System.out.println("");
+		
+		System.out.println("");
+		System.out.println("BinaryTree getNumberOfNodesTest #7: No tree");
+		BinaryTree<String> aTree7 = new BinaryTree<>();
+		System.out.println("TESTING: (BinaryTree) Number of nodes in the tree are " + aTree7.getNumberOfNodes());
+		System.out.println("GIVEN:   (BinaryNode) Number of nodes in the tree are " + aTree7.getNumberOfNodes_callBinaryNodeMethod());
+		assertEquals(aTree7.getHeight(), aTree7.getHeight_callBinaryNodeMethod());
 		System.out.println("");
 	} // end getNumberOfNodesTest
 	
