@@ -1,4 +1,4 @@
-class BinaryNode<T>
+public class BinaryNode<T>
 {
    private T             data;
    private BinaryNode<T> leftChild;  // Reference to left child
