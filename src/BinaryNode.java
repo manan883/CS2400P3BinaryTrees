@@ -106,20 +106,24 @@ class BinaryNode<T>
     * prints (using post-order traversal) all nodes of the subtree rooted at "this" node */
    public void postorderTraverse_binaryNodeMethod()
    {
+	   // Check left node, if the left node has a leftChild call the method again for leftChild
 	   if (leftChild != null) {
 		   leftChild.postorderTraverse_binaryNodeMethod();
 	   }
+	   // Once there's no more left node, check for a rightChild, if there's one, call the method again for rightChild
 	   if (rightChild != null) {
 		   rightChild.postorderTraverse_binaryNodeMethod();
 	   }
+	   // Once there's no more leftChild or rightChild, print the current node
 	   System.out.println(data);
-   }
+   } // end postorderTraverse_binaryNodeMethod()
    
    /** Protected version of postorderTraverse_binaryNodeMethodProtected()
     * @return  A string that contains the postorderTraverse_binaryNodeMethodProtected method's output
     */
    protected String postorderTraverse_binaryNodeMethodProtected()
    {
+	   // Same thing as postorderTraverse_binaryNodeMethod() but it returns a string instead
 	   String result = "";
 	   if (leftChild != null) {
 		   result = result + (String) leftChild.postorderTraverse_binaryNodeMethodProtected();
@@ -129,28 +133,32 @@ class BinaryNode<T>
 	   }
 	   result = result + data + " ";
 	   return result;
-   }
+   } // end postorderTraverse_binaryNodeMethodProtected()
+   
    /**-------------------------------------------------------------------- 
     * Part of Task 2*/
    /** A Recursive Method in the BinaryNode Class   
     * Computes the height of the subtree rooted at "this" node.
    @return  The height of the subtree rooted at "this" node. */
-   int heightLeft = 1;
-   int heightRight = 1;
-   int height;
    public int getHeight_binaryNodeMethod()
    {  
-	  
+	   // Initialize variables
+	   int heightLeft = 1;
+	   int heightRight = 1;
+	   int height;
+	   // If a left child exists, add one to heightLeft and call getHeight_binaryNodeMethod() again
 	   if (leftChild != null) {
 		   heightLeft = 1 + leftChild.getHeight_binaryNodeMethod();
 	   }
+	   // If a right child exists, add one to heightRight and call getHeight_binaryNodeMethod() again
 	   if (rightChild != null) {
 		   heightRight = 1 + rightChild.getHeight_binaryNodeMethod();
 	   }
+	   // If there is no left or right child, find the max height by comparing heightLeft and heightRIght
 	   height = Math.max(heightLeft, heightRight);
 	   
 	   return height;
-   } // end getHeight
+   } // end getHeight_binaryNodeMethod()
    
    /** -------------------------------------------------------------------- */
    /** A Recursive Method in the BinaryNode Class  
@@ -165,6 +173,6 @@ class BinaryNode<T>
 	  if (rightChild != null)
 	     rightNumber = rightChild.getNumberOfNodes_binaryNodeMethod();
 	  return 1 + leftNumber + rightNumber;
-	} // end getNumberOfNodes
+	} // end getNumberOfNodes_binaryNodeMethod()
 	
 } // end BinaryNode
