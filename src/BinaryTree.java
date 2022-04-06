@@ -105,7 +105,30 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
 		   System.out.println(node.getData());
 	   }
    }
- 
+   
+   /** Protected version of postOrderTraverse() that calls postOrderTraverseProtected(BinaryNode<T> node)
+    * @return  A string that contains the postOrderTraverseProtected method's output
+    */
+   String result = "";
+   protected String postorderTraverseProtected()
+   {
+	   result = "";
+	   return postOrderTraverseProtected(root);
+   }
+   
+   /** Protected version of postOrderTraverse(BinaryNode<T> node) that returns a string
+    * @return  A string that contains the postOrderTraverse method's output
+    */
+   protected String postOrderTraverseProtected(BinaryNode<T> node) {
+	  
+	   if (node != null) {
+		   postOrderTraverseProtected(node.getLeftChild());
+		   postOrderTraverseProtected(node.getRightChild());
+		   result = result + (String) node.getData() + " ";
+	   }
+	   return result;
+   }
+   
    /** The following calls postorderTraverse_binaryNodeMethod(), which is a recursive binaryNode class method   
     * prints (using post-order traversal) all nodes in the "whole" tree */
    public void postorderTraverse_callBinaryNodeMethod()
@@ -113,6 +136,13 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
 	   root.postorderTraverse_binaryNodeMethod();
    }
    
+   /** Protected version of postorderTraverse_callBinaryNodeMethod() that calls postorderTraverse_binaryNodeMethod()
+    * @return  A string that contains the postorderTraverse_binaryNodeMethodProtected method's output
+    */
+   protected String postorderTraverse_callBinaryNodeMethodProtected()
+   {
+	   return root.postorderTraverse_binaryNodeMethodProtected();
+   }
    /** -------------------------------------------------------------------- */
    /** Task 2: Implement the 2 methods
     *     . In BinaryTree.java

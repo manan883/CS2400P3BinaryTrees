@@ -115,6 +115,21 @@ class BinaryNode<T>
 	   System.out.println(data);
    }
    
+   /** Protected version of postorderTraverse_binaryNodeMethodProtected()
+    * @return  A string that contains the postorderTraverse_binaryNodeMethodProtected method's output
+    */
+   protected String postorderTraverse_binaryNodeMethodProtected()
+   {
+	   String result = "";
+	   if (leftChild != null) {
+		   result = result + (String) leftChild.postorderTraverse_binaryNodeMethodProtected();
+	   }
+	   if (rightChild != null) {
+		   result = result + (String) rightChild.postorderTraverse_binaryNodeMethodProtected();
+	   }
+	   result = result + data + " ";
+	   return result;
+   }
    /**-------------------------------------------------------------------- 
     * Part of Task 2*/
    /** A Recursive Method in the BinaryNode Class   
