@@ -3,7 +3,6 @@ import java.util.ArrayList;
 public class BinaryTree<T> implements BinaryTreeInterface<T>
 {
    private BinaryNode<T> root;
-   public static String s = "";
    public BinaryTree()
    {
       root = null;
@@ -107,7 +106,6 @@ public class BinaryTree<T> implements BinaryTreeInterface<T>
 	   if(node!=null) {
 		   postorderTraverse(node.getLeftChild());
 		   postorderTraverse(node.getRightChild());
-		   s = node.getData() + ",";
 		   System.out.print(node.getData() + ",");
 		  
 	   }
