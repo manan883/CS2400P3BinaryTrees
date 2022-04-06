@@ -113,7 +113,7 @@ class BinaryNode<T>
 	   if(rightChild != null) {
 		   rightChild.postorderTraverse_binaryNodeMethod();
 	   }
-	   System.out.println(data);
+	   System.out.print(data + ",");
 	   
    }
    
